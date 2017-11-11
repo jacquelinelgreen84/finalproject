@@ -1,0 +1,517 @@
+ /*Styling fo basic template for page --------*/
+body {
+  background-color:rgba(170, 204, 187, .6);
+  font-family: 'Oswald', sans-serif;
+  display:grid;
+  flex-direction: column;
+  grid-template-rows: minmax(150px,350px) 40px minmax(350px,auto) minmax(125px,auto) 100px;
+  grid-template-columns: 15% 85%;
+  grid-template-areas:"a b"
+                      "a c" 
+                      "a d"
+                      "a e"
+                      "f f";
+  
+
+}
+#header-wrapper{
+  grid-area:a;
+}
+header{
+  overflow: hidden;
+  font-family: 'Iceland', cursive;
+  background-color: rgb(87,97,109);
+  color:rgb(231,120,65);
+  transform:rotate(-90deg);
+  position: fixed;
+  word-spacing: 5px;
+  top:35%;
+  left:-15%;
+  padding: 10px 70px;
+}
+#sub{
+  font-size: 25px;
+  text-shadow: 1px 1px rgb(11,8,1);
+  letter-spacing: 1px;
+}
+#title{
+  font-size:85px;
+  text-shadow: 2px 2px rgb(11,8,1);
+  letter-spacing: 9px;
+  
+}
+nav{
+  grid-area:c;
+ text-align: right;
+ font-weight: 300;
+ word-spacing: 5px;
+ font-size: 20px;
+ background-color: rgba(87,97,109, .7);
+}
+nav a{
+  text-decoration: none;
+  /*color: rgb(231,120,65);*/
+  color: rgb(255,255,255);
+  text-shadow: 1px 1px rgb(11,8,1);
+  word-spacing: 1px;
+}
+nav a:hover{
+  color: rgb(255,255,255);
+  /*color: rgb(231,120,65);*/
+  font-weight: 500;
+}
+footer{
+  grid-area:f;
+  background-color: rgba(87,97,109, .2);
+  color: rgba(255,255,255, .7);
+  text-align: center;
+  padding-top: 5px;
+}
+#title2{
+  font-size:35px;
+  text-shadow: 2px 2px #0b0801;
+}
+#sub2{
+  font-size: 15px;
+  text-shadow: 1px 1px #0b0801;
+}
+#logo{
+  font-family: 'Iceland', cursive;
+}
+#copyright{
+  font-weight: 300;
+  font-size: 10px;
+  color:rgba(34, 17, 0, .8); 
+}
+/* Carousel */
+#carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 99vw;
+  height: 50vh;
+  grid-area:b;
+}
+
+.arrow {
+  width: 5%;
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+#right-arrow {
+  right: 20px;
+}
+
+#left-arrow {
+  left: 20px;
+  padding-left: 15%;
+}
+.slide-image {
+  width: 99vw;
+  height: 50vh;
+  grid-area:b;
+  background-size: cover;
+  display: inline-block;
+
+}
+/*---------------------------------------------------*/
+/*-----------Styling for Index page------------------*/
+.feature{
+  font-weight: 600;
+  font-size: 25px;
+}
+.info{
+  font-weight: 300px;
+  word-break: keep-all;
+}
+#main{
+  grid-area:d;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  color:rgba(34, 17, 0, .8);
+}
+#main section { 
+  width: 30%; 
+  height: 80%;
+  text-align:center;
+  background-color:rgba(255,255,255, .4);
+  box-shadow: 5px 5px 7px 1px grey;
+  padding: 5px;
+}
+#secondary{
+  grid-area: e;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 99%;
+  height: 90px;
+  /*padding-left: 40px;*/
+  font-size: 25px;
+}
+#secondary a{
+  text-decoration: none;
+  color: rgb(229, 4, 19);
+  font-weight: 500;
+}
+#secondary a:hover{
+  color: rgb(229, 4, 19);
+  font-weight: 700;
+}
+section a{
+  text-decoration: none;
+  color:rgba(34, 17, 0, .8);
+
+}
+section a:hover{
+  font-weight: 500;
+}
+/*--------------- Carousel images for Index----------*/
+body#index #slide1 {
+  background-image: url('../carousel/img/image1.jpeg');
+  background-position: center;
+}
+
+body#index #slide2 {
+  background-image: url('../carousel/img/image2.jpeg');
+}
+
+body#index #slide3 {
+  background-image: url('../carousel/img/image3.jpeg');
+  background-position: center;
+
+}
+
+body#index #slide4 {
+  background-image: url('../carousel/img/image4.jpeg');
+}
+
+body#index #slide5 {
+  background-image: url('../carousel/img/image5.jpeg');
+}
+
+/*-----------------------------------------------------*/
+/*---------------Styling for About page----------------*/
+body#about #image {
+  grid-area: b;
+  height: 50vh;
+  width:85vw;
+  background-image: url('../img/about.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+body#about #bio{
+  grid-area: d;
+  display:flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+#bio article{
+  width: 95%; 
+  height: 35%;
+  background-color:rgba(255,255,255, .4);
+  box-shadow: 5px 5px 7px 1px grey;
+  padding: 15px;
+
+}
+#quote{
+  grid-area: e;
+  text-align: center;
+  color:rgb(255,255,255);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 45px;
+  text-shadow: 2px 2px rgb(11,8,1);
+}
+.photo{
+  display:flex;
+  text-align:center;
+  padding: 10px;
+}
+.name{
+  font-family: 'Iceland', cursive;
+  font-size: 30px;
+  color:rgb(231,120,65);
+  text-shadow: 1px 1px rgb(11,8,1);
+  letter-spacing: 1px;
+  font-size: 40px;
+}
+#about div.photo img{
+  height:250px;
+  width: 200px;
+  border-width: 2px;
+  border-color: rgb(87,97,109); ;
+  border-style: solid;
+  object-fit: cover;
+}
+#bio p{
+  padding: 5px 15px;
+  font-weight: 300;
+  }
+/*-----------------------------------------------------*/
+/*---------------Styling for Services page----------------*/
+ body#services {
+  background-color:rgba(170, 204, 187, .6);
+  font-family: 'Oswald', sans-serif;
+  display:grid;
+  flex-direction: column;
+  grid-template-rows: minmax(100px,150px) 40px minmax(350px, auto) 500px 100px;
+  grid-template-columns: 15% 85%;
+  grid-template-areas:"a b"
+                      "a c" 
+                      "a d"
+                      "a e"
+                      "a e"
+                      "f f";
+} 
+
+body#services #image {
+  grid-area: b;
+  height: 25vh;
+  width:85vw;
+  background-image: url('../img/services.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+#menu{
+  grid-area: d;
+}
+#menu section .feature{
+  background-color:rgba(255,255,255, .7);
+  box-shadow: 5px 5px 7px 1px grey;
+  padding: 5px 5px 0px 5px;
+  padding: 5px;
+}
+#menu section .info{
+  background-color:rgba(255,255,255, .4);
+  padding: 0px 5px 5px 5px;
+}
+#form{
+  grid-area: e;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 225px;
+}
+form{
+  border: 2px solid rgb(231,120,65);
+  border-radius: 4px;
+  padding: 15px;
+  background-color: rgba(87,97,109, .7);
+  color:rgb(255,255,255);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+#newsletter{
+  color: rgb(231,120,65);
+  font-weight: 500;
+}
+#note{
+  color: rgb(231,120,65);
+}
+body#services footer{
+  grid-area: f;
+  align-items: bottom;
+}
+/*-----------------------------------------------------*/
+/*---------------Styling for Artist page----------------*/
+body#services {
+  background-color:rgba(170, 204, 187, .6);
+  font-family: 'Oswald', sans-serif;
+  display:grid;
+  flex-direction: column;
+  grid-template-rows: minmax(100px,150px) 40px minmax(350px, auto) 25px 100px;
+  grid-template-columns: 15% 85%;
+  grid-template-areas:"a b"
+                      "a c" 
+                      "a d"
+                      "a e"
+                      "f f";
+} 
+body#artist #bio{
+  display:flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+#artist article{
+
+  width: 95%; 
+  height: 35%;
+  background-color:rgba(255,255,255, .4);
+  box-shadow: 5px 5px 7px 1px grey;
+  padding: 15px;
+  word-wrap: all;
+  font-weight: 300;
+}
+#showcase{
+  grid-area: d;
+}
+#artist span{
+  padding: 5px;
+}
+#artist div.photo span#blue img{
+  height:250px;
+  width: 200px;
+  border-width: 2px;
+  border-color: rgb(87,97,109); ;
+  border-style: solid;
+  object-fit: cover;
+}
+#artist div.photo span#agua img{
+  height:250px;
+  width: 400px;
+  border-width: 2px;
+  border-color: rgb(87,97,109); ;
+  border-style: solid;
+  object-fit: cover;
+}
+#artist div.photo span#suave img{
+  height:250px;
+  width: 400px;
+  border-width: 2px;
+  border-color: rgb(87,97,109); ;
+  border-style: solid;
+  object-fit: cover;
+}
+/*--------------- Carousel images --------------------*/
+body#artist #slide1 {
+  background-image: url('../carousel/img2/image1.jpeg');
+}
+
+body#artist #slide2 {
+  background-image: url('../carousel/img2/image2.jpeg');
+  background-position: center;
+}
+
+body#artist #slide3 {
+  background-image: url('../carousel/img2/image3.jpeg');
+  background-position: left center;
+}
+
+body#artist #slide4 {
+  background-image: url('../carousel/img2/image4.jpeg');
+  background-position: left center;
+}
+
+body#artist #slide5 {
+  background-image: url('../carousel/img2/image5.jpeg');
+  background-position: center;
+}
+/*-----------------------------------------------------*/
+/*---------------Styling for Catalog page----------------*/
+body#catalog #image {
+  grid-area: b;
+  height: 50vh;
+  width:85vw;
+  background-image: url('../img/catalog.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+audio{
+  grid-area: d;
+  border: 2px solid rgb(231,120,65);
+  border-radius: 4px;
+  padding: 15px;
+  background-color: rgba(87,97,109, .7);
+  color:rgb(255,255,255);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  padding-bottom: 20px;
+  align-self: center;
+}
+/*-----------------------------------------------------*/
+/*---------------Styling for Contact page----------------*/
+body#contact{
+  font-family: 'Oswald', sans-serif;
+}
+body#contact #image {
+  grid-area: b;
+  height: 50vh;
+  width:85vw;
+  background-image: url('../img/contact.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+#contact-container{
+  grid-area: d;
+}
+#contact{
+  /*font-family: 'Iceland', cursive;*/
+  font-size: 30px;
+  color:rgb(231,120,65);
+  text-shadow: 1px 1px rgb(11,8,1);
+  letter-spacing: 1px;
+  font-size: 40px;
+  text-decoration: none;
+  padding: 10px;
+}
+/*body #contact #email{
+  font-family: 'Iceland', cursive;
+  font-size: 30px;
+  color:rgb(231,120,65);
+  text-shadow: 1px 1px rgb(11,8,1);
+  letter-spacing: 1px;
+  font-size: 30px;
+  text-decoration: none;
+}
+body #contact #email a{
+
+  font-family: 'Iceland', cursive;
+  font-size: 30px;
+  color:rgb(255,255,255);
+  text-shadow: 1px 1px rgb(11,8,1);
+  letter-spacing: 1px;
+  font-size: 30px;
+}*/
+body#contact nav a{
+  text-decoration: none;
+  /*color: rgb(231,120,65);*/
+  color: rgb(255,255,255);
+  text-shadow: 1px 1px rgb(11,8,1);
+  word-spacing: 1px;
+}
+body#contact nav a:hover{
+  color: rgb(255,255,255);
+  /*color: rgb(231,120,65);*/
+  font-weight: 500;
+}
+footer{
+  grid-area:f;
+}
+/*------------------------------------------------------------------*/
+/* For different media sizes*/
+@media screen and (max-width:900px){
+  #main {
+    flex-direction: column;
+    align-content: center;
+  }
+  #main section { 
+  width: 100%;
+  height: 50%; 
+  text-align:justify;
+  background-color:rgba(255,255,255, .4);
+}
+  header{
+    left:-25%;
+}
+.info{
+    justify-content: center;
+  }
+}
+/*@media (max-device-width: 1024px) {
+  .arrow {
+    width: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .arrow {
+    width: 10%;
+  }
+}
